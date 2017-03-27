@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ComputeSpeak</title>
+</head>
+<body>
+    <header><h1>ComputeSpeak</h1></header>
+    <main>
+        <header class="hidden"><h2>Input and Output Conversion Form</h2></header>
+        <section>
+            <h2>Input</h2>
+            <select name="input_types" id="input_type">
+                <option value="OCT">Octal</option>
+                <option value="HEX">Hexidecimal</option>
+                <option value="BIN">Binary</option>
+                <option value="ASCII">ASCII/Human</option>
+            </select>
+            <div id="input">
+                <input type="text" id="input">
+                <label for="input"></label>
+            </div>
+        </section>
+        <section>
+            <h2>Output</h2>
+            <select name="output_types" id="output_type">
+                <option value="OCT">Octal</option>
+                <option value="HEX">Hexidecimal</option>
+                <option value="BIN">Binary</option>
+                <option value="ASCII">ASCII/Human</option>
+            </select>
+            <div class="output">
+                <input type="text" id="output">
+                <label for="output"></label>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <small>Developed by <a href="#">Darius Strasel</a>
+        </small>
+    </footer>
+</body>
+</html>
