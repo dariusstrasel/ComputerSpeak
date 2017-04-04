@@ -54,7 +54,7 @@ ROOT_URLCONF = 'ComputerSpeak.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates/build"],
+        'DIRS': ["templates/build/html"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
