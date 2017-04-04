@@ -1,3 +1,6 @@
 templates/node_modules/
 templates/build/*
 .idea/
+.DS_Store
+ComputerSpeak/__pycache__/
+db.sqlite3
