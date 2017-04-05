@@ -9,39 +9,36 @@
     <header><h1>ComputerSpeak</h1></header>
     <main>
         <header class="hidden"><h2>Input and Output Conversion Form</h2></header>
-        <section>
-            <h2>Input</h2>
-            <form>
-                <select name="input_types" id="input_type">
-                    <option value="OCT">Octal</option>
-                    <option value="HEX">Hexidecimal</option>
-                    <option value="BIN">Binary</option>
-                    <option value="ASCII">ASCII/Human</option>
-                </select>
-                <label for="input_type"></label>
-                <div id="input">
-                    <input type="text" id="input">
-                    <label for="input"></label>
-                </div>
-                <input type="submit" value="Translate" id="translate">
-            </form>
-        </section>
-        <section>
-            <h2>Output</h2>
-            <form>
-                <select name="output_types" id="output_type">
-                    <option value="OCT">Octal</option>
-                    <option value="HEX">Hexidecimal</option>
-                    <option value="BIN">Binary</option>
-                    <option value="ASCII">ASCII/Human</option>
-                </select>
-                <label for="output_type"></label>
-                <div class="output">
-                    <input type="text" id="output">
-                    <label for="output"></label>
-                </div>
-            </form>
-        </section>
+        <form action="{% url 'translate' %}">
+            <section>
+                <h2>Input</h2>
+                    <select name="input_types" id="input_type">
+                        <option value="TEXT">Text</option>
+                        <option value="OCT">Octal</option>
+                        <option value="HEX">Hexidecimal</option>
+                        <option value="BIN">Binary</option>
+                    </select>
+                    <label for="input_type"></label>
+                    <div id="input">
+                        <input type="text" name="inputText" id="input" value="{{ input_text }}">
+                        <label for="input"></label>
+                    </div>
+            </section>
+            <section>
+                <h2>Output</h2>
+                    <select name="output_types" id="output_type">
+                        <option value="OCT">Octal</option>
+                        <option value="HEX">Hexidecimal</option>
+                        <option value="BIN">Binary</option>
+                        <option value="TEXT">Text</option>
+                    </select>
+                    <label for="output_type"></label>
+                    <div class="output">
+                        <p>{{ output_text }}</p>
+                    </div>
+            </section>
+            <input type="submit" value="Translate" id="translate">
+        </form>
     </main>
     <footer>
         <small>Developed by <a href="#">Darius Strasel</a>
